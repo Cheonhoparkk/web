@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form>
+<label for="id">아이디</label><input type="text" id="id" onchange="change(this)">
+<br>
+<label for="c1">빨강</label><input type="checkbox" value="red" id="c1" name="fc" onclick="check(this)">
+<label for="c2">파랑</label><input type="checkbox" value="blue" id="c2" name="fc" onclick="check(this)">
+<label for="c3">노랑</label><input type="checkbox" value="yello" id="c3" name="fc" onclick="check(this)">
+<br>
+<label for="t1">남자</label><input type="radio" value="m" name="trans" id="t1">
+<label for="t2">여자</label><input type="radio" value="f" name="trans" id="t2">
+<br>
+<label for="sel">안주</label>
+<select id="sel">
+	<option value="">선택</option>
+	<option value="족발">족발</option>
+	<option value="초밥">초밥</option>
+	<option value="참치">참치</option>
+	<option value="떡볶이">떡볶이</option>
+</select>
+<br>
+<textarea id="txt"></textarea>
+<br>
+<button>클릭</button>
+<script>
+var requireChecked = false;
+function change(obj){
+	alert(obj.value);
+}
+function check(obj){
+	requireChecked = false;
+	var checkboxs = document.querySelectorAll('input[name=fc]');
+	for(var i=0;i<checkboxs.length;i++){
+	requireChecked |= checkbox[i].checked;
+	}
+}
+document.querySelector('button').onclick = function(){
+	if(!requireChecked){
+		alert('좋아하는 색상은 반드시 1개 이상 체크 하셔야 합니다.');
+		return false;
+	}
+	alert('전송 완료');
+}
+</script>
+</form>
+<script>
+
+</script>
+</body>
+</html>

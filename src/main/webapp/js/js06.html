@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="rDiv">1</div>
+<div id="rDiv">2</div>
+<script>
+var $ = function(selector) {
+	var obj = document.querySelector(selector);
+	obj.html = function(html){
+		obj.innerHTML = html;
+	}
+	return obj;
+}
+$('#rDiv').html('안녕하세요');
+var rDiv = document.getElementById('rDiv');
+var rDivs = document.querySelectorAll('div');
+//rDivs[0].innerHTML = '안녕하세유!';
+</script>
+</body>
+</html>
