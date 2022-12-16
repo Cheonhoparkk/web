@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-var arr = [];
+/* var arr = [];
 arr.push(1);
 arr.push(2);
 arr.push(3);
@@ -14,7 +14,18 @@ console.log(JSON.stringify(arr));
 var map = {};
 map.name = '박진영';
 map.addr = 'Seoul';
-console.log(JSON.stringify(map));
+console.log(JSON.stringify(map)); */
+
+let humanList = [];
+for(let i=1;i<=10;i++){
+	let human = {
+			name : '이름' + i,
+			age : i,
+			addr : 'Seoul'
+	};
+	humanList.push(human);
+}
+console.log(JSON.stringify(humanList));
 </script>
 </body>
 </html>

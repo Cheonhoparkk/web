@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,13 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <script>
-	alert(!0);
-	alert('');
-	alert(!null);
-	alert(!undefined);
-	alert(!flase);
-	/* 모두가 다 true */
+	alert('${msg}');
+	location.href='${url}';
 </script>
 </body>
 </html>

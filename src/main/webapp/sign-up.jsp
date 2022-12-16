@@ -7,7 +7,7 @@
 <title>Sign In</title>
 </head>
 <body>
-<form method="POST" action="/sign-up_ok.jsp">
+<form method="POST" action="/sign-up-ok.jsp">
 <input type="text" name="uiName" placeholder="이름"><br>
 <input type="text" name="uiId" placeholder="아이디"><br>
 <input type="password" name="uiPwd" placeholder="비밀번호"><br>

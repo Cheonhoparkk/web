@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+window.onload = function(){
+	let xhr = new XMLHttpRequest();
+	console.log(xhr.readyState);
+	xhr.open('GET','/js/ezen.json');
+	console.log(xhr.readyState);
+	xhr.onreadystatechange = function(){
+		console.log(xhr.readyState);
+		if(xhr.readyState === 4){
+			if(xhr.status === 200){
+				console.log(xhr.responseText);
+				let list = JSON.parse(xhr.responseText);
+				let html = '';
+				for(let i=0;i<list.length;i++){
+					let human = list[i];
+					html += '<li>';
+					html += human.name + ',' + human.age + ',' + human.addr;
+					html += '</li>';
+				}
+				document.querySelector('#list').innerHTML = html;
+			}else{
+				
+			}
+		}
+	}
+	xhr.send();
+}
+</script>
+<ul id="list">
+</ul>
+<script>
+</script>
+</body>
+</html>
