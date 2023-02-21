@@ -8,7 +8,7 @@ public class DBCon {
 	
 	private static final String URL = "jdbc:mariadb://database-1.cicmav94awml.ap-northeast-2.rds.amazonaws.com:3306/EZEN";
 	private static final String USERNAME = "admin";
-	private static final String PASSWORD = "!WLSpjy852";
+	private static final String PASSWORD = "*****";
 	private static final String DRIVER_CLASS_ME = "org.mariadb.jdbc.Driver";
 	
 	private static void setDriverClassName() {
